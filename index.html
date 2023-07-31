@@ -1,0 +1,54 @@
+<!-- A calculator using HTML, CSS & JavaScript made by Vijaya Amodkar -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- Link to the default stylesheet -->
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="light.css" />
+    <link rel="icon" type="image/x-icon" href="calc_favicon.png">
+  </head>
+  <body>
+    <!-- Theme buttons to switch between light and dark theme -->
+    <div id="theme" style="display: inline-block">
+      <button class="theme" type="button" onclick="changeStylesheet('light.css')">
+        Light
+      </button>
+      <button class="theme" type="button" onclick="changeStylesheet('dark.css')">
+        Dark
+      </button>
+    </div>
+    <!-- Calculator container -->
+    <div class="calculator">
+      <!-- Display input field -->
+      <input type="text" id="display" readonly />
+      <!-- Keypad grid -->
+      <div class="keypad">
+        <!-- Calculator buttons -->
+        <button id="C" onclick="clearDisplay()">C</button>
+        <button id="&larr;" onclick="deleteDigit()">&larr;</button>
+        <button id="/" onclick="appendToDisplay('/')">/</button>
+        <button id="*" onclick="appendToDisplay('*')">*</button>
+        <button id="7" onclick="appendToDisplay('7')">7</button>
+        <button id="8" onclick="appendToDisplay('8')">8</button>
+        <button id="9" onclick="appendToDisplay('9')">9</button>
+        <button id="-" onclick="appendToDisplay('-')">-</button>
+        <button id="4" onclick="appendToDisplay('4')">4</button>
+        <button id="5" onclick="appendToDisplay('5')">5</button>
+        <button id="6" onclick="appendToDisplay('6')">6</button>
+        <button id="+" onclick="appendToDisplay('+')">+</button>
+        <button id="1" onclick="appendToDisplay('1')">1</button>
+        <button id="2" onclick="appendToDisplay('2')">2</button>
+        <button id="3" onclick="appendToDisplay('3')">3</button>
+        <button id="res" onclick="calculate()">=</button>
+        <button id="0" onclick="appendToDisplay('0')">0</button>
+        <button id="." onclick="appendToDisplay('.')">.</button>
+      </div>
+    </div>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
